@@ -1,0 +1,19 @@
+<h1>Data sharing</h1>
+
+<div>
+  pass data: <input type="text" #name>
+  <input type="button" value="send" (click)="sendData(name.value)">
+</div>
+
+<div>
+  myname : <input type="text" #myname>
+  <input type="button" value="send" (click)="send(myname.value)">
+</div>
+
+{{xyz}}
+
+<hr>
+
+<app-home [parentData]="parentData" [nameData]="nameData" [xyz]="xyz"></app-home>
+
+<router-outlet></router-outlet>
